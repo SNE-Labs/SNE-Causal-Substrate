@@ -1,0 +1,15 @@
+[package]
+name = "sne-causal-substrate"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Ontology-neutral causal persistence mechanics under dual Agency and Lastro stewardship"
+publish = false
+
+[lib]
+name = "sne_causal_substrate"
+path = "src/lib.rs"
+
+[dev-dependencies]
+serde_json = "1"
+

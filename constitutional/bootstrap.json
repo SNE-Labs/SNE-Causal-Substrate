@@ -1,0 +1,89 @@
+{
+  "checkpoint": "R10.1_NEUTRAL_REPOSITORY_BOOTSTRAP",
+  "repository": "SNE-Labs/SNE-Causal-Substrate",
+  "repository_visibility": "PUBLIC",
+  "constitution": "AGENCY-LASTRO-SUBSTRATE-CONSTITUTION-001",
+  "pins": {
+    "r9_constitution": {
+      "repository": "SNE-Labs/Lastro",
+      "commit": "1065443f78b29423dec70b1f0c027ab9d1e15176",
+      "path": "compatibility/agency-lastro-substrate-constitution-r9-candidate.json",
+      "git_blob_sha1": "0ed951cbdc6245ea134b56acf34ec5a328157636",
+      "sha256": "sha256:55ec23af61ec2e45b9f497865adc8646f766958b4dc21d39f576ea82f998bf0f",
+      "bytes": 7201
+    },
+    "r9_orivern_judgment": {
+      "repository": "SNE-Labs/Lastro",
+      "commit": "1065443f78b29423dec70b1f0c027ab9d1e15176",
+      "path": "compatibility/agency-lastro-substrate-constitution-r9-orivern-judgment.json",
+      "git_blob_sha1": "4a7129d2a6c65af6ad1306d847df8d8962ee2e34"
+    },
+    "r9_aevum_judgment": {
+      "repository": "SNE-Labs/SNE-Agency",
+      "commit": "66087587dafbfb5d19d7a83d6750e7ab8390c7eb",
+      "path": "compatibility/agency-lastro-substrate-constitution-r9-aevum-judgment.json",
+      "git_blob_sha1": "e76cc559bb0fbef8f229afcbfba398ea8fc9b971"
+    },
+    "r9_joint_lastro": {
+      "repository": "SNE-Labs/Lastro",
+      "commit": "c991294f91159ea38bca0ac54a6298b080b8fc44",
+      "path": "compatibility/agency-lastro-substrate-constitution-r9-joint-reconciliation.json",
+      "git_blob_sha1": "7dfebbf34a201cad656cdf493c14474de76e1c5d"
+    },
+    "r9_joint_agency": {
+      "repository": "SNE-Labs/SNE-Agency",
+      "commit": "2971c51546d3c1d4792c6330ff959ba4a6457f75",
+      "path": "compatibility/agency-lastro-substrate-constitution-r9-joint-reconciliation.json",
+      "git_blob_sha1": "cd0bd4f1783d0a4bb4060a5ce49043a23942d962"
+    },
+    "r10_orivern_authorization": {
+      "repository": "SNE-Labs/Lastro",
+      "commit": "7c90408964b99b15f8957ab49ead2bc4426ee9c3",
+      "path": "compatibility/agency-lastro-shared-extraction-r10-orivern-authorization.json",
+      "git_blob_sha1": "b195cb9d2c89a38bcd4af52a5e3fa738bc5a6c23",
+      "sha256": "sha256:c496d59b839c371e463738da0a51037c2ffedbc07a76b3b791de29f5371d6a56",
+      "bytes": 2756
+    },
+    "r10_aevum_authorization": {
+      "repository": "SNE-Labs/SNE-Agency",
+      "commit": "ce795d9589b68fa11a7a603afb48a9e498730ffb",
+      "path": "compatibility/agency-lastro-shared-extraction-r10-aevum-authorization.json",
+      "git_blob_sha1": "cfcb500ad140b7a75d8ffd056765163c095bb875"
+    },
+    "r10_joint_lastro": {
+      "repository": "SNE-Labs/Lastro",
+      "commit": "b5522703727cc0b85a87719a8ec77737fa200120",
+      "path": "compatibility/agency-lastro-shared-extraction-r10-joint-authorization.json",
+      "git_blob_sha1": "96e61f7e48150467fcd12bc4916e74e28e534a57"
+    },
+    "r10_joint_agency": {
+      "repository": "SNE-Labs/SNE-Agency",
+      "commit": "2ee1fee36bdf90bad699a47ddef10c8311bddad7",
+      "path": "compatibility/agency-lastro-shared-extraction-r10-joint-authorization.json",
+      "git_blob_sha1": "96e61f7e48150467fcd12bc4916e74e28e534a57"
+    }
+  },
+  "joint_state": {
+    "all_seven_shared_gates_closed": true,
+    "joint_r10": "AUTHORIZED",
+    "repository_creation_authorized": true,
+    "shared_extraction_authorized": true,
+    "consumer_cutover_authorized": false
+  },
+  "repository_state": {
+    "repository_created": true,
+    "constitutional_bootstrap_installed": true,
+    "neutral_package_scaffold_created": true,
+    "extracted_mechanisms": [],
+    "next_checkpoint": "E1_RECORD_FRAMING_CANDIDATE"
+  },
+  "governance": {
+    "required_stewards": ["AGENCY_STEWARD", "LASTRO_STEWARD"],
+    "unilateral_change_or_release": false,
+    "import_grants_authority": false,
+    "consumer_implementations_remain_canonical": true,
+    "branch_protection_required_before_first_release": true,
+    "first_release_authorized": false
+  }
+}
+
