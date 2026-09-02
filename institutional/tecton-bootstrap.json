@@ -1,0 +1,97 @@
+{
+  "checkpoint": "TECTON_INSTITUTIONAL_MATERIALIZATION_CANDIDATE",
+  "repository": "SNE-Labs/SNE-Causal-Substrate",
+  "base_commit": "ada7e964b940ac8bbadb51a49714a493f8189bec",
+  "canonical_constitution_modified": false,
+  "identity": {
+    "name": "TECTON",
+    "role": "SUBSTRATE_IMPLEMENTER",
+    "institution_type": "EXECUTOR",
+    "is_steward": false,
+    "vote": "NONE"
+  },
+  "power_cardinality": {
+    "implementation_authority": ["TECTON"],
+    "acceptance_authority": ["AEVUM", "ORIVÉRN"],
+    "constitutional_authority": ["AEVUM", "ORIVÉRN"]
+  },
+  "laws": [
+    "Tecton constructs mechanisms that may carry meaning, but never decides what meaning they carry.",
+    "Tecton may modify the mechanism within the Constitution; Tecton may not modify the Constitution that limits the mechanism."
+  ],
+  "may": [
+    "read Agency",
+    "read Lastro",
+    "read pinned R9/R10 artifacts",
+    "read exported fixtures",
+    "inspect proven consumer implementations for shared mechanical properties",
+    "modify SNE-Causal-Substrate source",
+    "modify substrate tests and fixtures",
+    "modify mechanical tribunal apparatus",
+    "produce candidate receipts",
+    "construct E1 through E6 incrementally",
+    "demonstrate mechanical invariants"
+  ],
+  "may_not": [
+    "modify Agency",
+    "modify Lastro",
+    "define ontology",
+    "define semantic admission policy",
+    "define or grant authority",
+    "interpret consumer payloads",
+    "introduce consumer or economic semantics into substrate core",
+    "accept own candidate",
+    "migrate histories",
+    "perform consumer cutover",
+    "publish release unilaterally",
+    "unilaterally modify CONSTITUTION.md",
+    "unilaterally modify institutional roles or governance",
+    "unilaterally modify acceptance rules",
+    "unilaterally modify extraction sequence",
+    "unilaterally modify authority boundaries",
+    "unilaterally modify release policy"
+  ],
+  "tribunal_semantics": {
+    "mechanical_tribunal": {
+      "executor": "TECTON",
+      "output": "CANDIDATE_EVIDENCE",
+      "binding_judgment": false
+    },
+    "ontology_leakage_tribunal": {
+      "executor": "TECTON",
+      "output": "CANDIDATE_EVIDENCE",
+      "binding_judgment": false
+    },
+    "agency_compatibility": {
+      "judge": "AEVUM",
+      "binding_judgment": true
+    },
+    "lastro_compatibility": {
+      "judge": "ORIVÉRN",
+      "binding_judgment": true
+    }
+  },
+  "acceptance": {
+    "tecton_self_acceptance_possible": false,
+    "required_judgments": {
+      "AEVUM": "PASS",
+      "ORIVÉRN": "PASS"
+    },
+    "candidate_identity_must_match": true,
+    "status": "AWAITING_DUAL_STEWARD_ACCEPTANCE"
+  },
+  "e1_boundary": {
+    "functional_e1_implemented_by_this_checkpoint": false,
+    "e1_accepted": false,
+    "consumer_cutover_authorized": false,
+    "next_legitimate_work": "E1_RECORD_FRAMING_CANDIDATE"
+  },
+  "non_claims": [
+    "This candidate does not change the canonical R9 Constitution.",
+    "This candidate does not make Tecton a steward.",
+    "This candidate does not accept E1.",
+    "This candidate does not implement E1 functional mechanics.",
+    "This candidate does not authorize Agency or Lastro cutover.",
+    "This candidate does not authorize a release."
+  ]
+}
