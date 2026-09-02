@@ -13,6 +13,9 @@ pub use frame::{
     encode_frame,
 };
 
+/// The first extraction step authorized by R10 remains E1 until dual acceptance.
+pub const NEXT_EXTRACTION_STEP: &str = "E1_RECORD_FRAMING";
+
 /// The currently materialized extraction candidate.
 pub const ACTIVE_EXTRACTION_CANDIDATE: &str = "E1_RECORD_FRAMING_CANDIDATE";
 
