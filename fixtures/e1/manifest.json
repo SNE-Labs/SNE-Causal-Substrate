@@ -1,0 +1,113 @@
+{
+  "fixture_set": "E1_RECORD_FRAMING_COMPATIBILITY_V1",
+  "status": "TECTON_CANDIDATE_EVIDENCE",
+  "constitution": {
+    "r9_source_repository": "SNE-Labs/Lastro",
+    "r9_source_commit": "1065443f78b29423dec70b1f0c027ab9d1e15176",
+    "r9_source_path": "compatibility/agency-lastro-substrate-constitution-r9-candidate.json",
+    "r9_source_git_blob": "0ed951cbdc6245ea134b56acf34ec5a328157636",
+    "r10_joint_git_blob": "96e61f7e48150467fcd12bc4916e74e28e534a57"
+  },
+  "consumer_a_generic_framing_witness": {
+    "source_repository": "SNE-Labs/SNE-Agency",
+    "source_commit": "fe4d1a7ad962ab74ac2950246d7cd57ef3eb050d",
+    "source_path": "crates/agency-lastro-compatibility/src/bin/r2e-generic-framing.rs",
+    "source_git_blob": "7e8ad8a979f77243d376b8e43a9704ac99b52d4a",
+    "observed_mechanics": [
+      "fixed format discriminator",
+      "explicit protocol version",
+      "u64 structural sequence field",
+      "explicit payload length",
+      "opaque payload bytes",
+      "strict exact-length decode",
+      "malformed or partial frame rejection"
+    ]
+  },
+  "consumer_a_private_writer_corroboration": {
+    "source_repository": "SNE-Labs/SNE-Agency",
+    "source_commit": "059bc71f9819f22f16c8cc927cdade1b46c91dc3",
+    "source_path": "crates/agency-kernel/src/admission.rs",
+    "source_git_blob": "18b39186ea8b4038b371e4375471ce12d31980de",
+    "consumer_specific_fields_are_not_extracted": true
+  },
+  "consumer_b_writer_witness": {
+    "source_repository": "SNE-Labs/Lastro",
+    "source_commit": "7f08a980c0387836731aa9842ecb517a5d6db773",
+    "source_path": "src/journal.rs",
+    "source_git_blob": "4a2bd27c9cf37aeae2b304636a40e96c24eb8dfc",
+    "native_encoding": "JSONL",
+    "consumer_specific_event_schema_is_not_extracted": true,
+    "observed_mechanics": [
+      "explicit schema version",
+      "u64 structural sequence field",
+      "deterministic record boundary",
+      "strict malformed record rejection",
+      "complete record acceptance"
+    ]
+  },
+  "consumer_b_opaque_payload_origin": {
+    "source_repository": "SNE-Labs/Lastro",
+    "source_commit": "7f08a980c0387836731aa9842ecb517a5d6db773",
+    "source_path": "compatibility/journal-process-crash-v1/manifest.json",
+    "source_git_blob": "63d4a816bf3a7c36ff05f28a362898a684ea0c74",
+    "payloads": [
+      {
+        "id": "JSON_EVENT_BYTES",
+        "substrate_path": "fixtures/e1/lastro-7f08a98/json-event-bytes.bin",
+        "bytes_hex": "7b226b696e64223a224c415354524f5f4556454e54222c2276616c7565223a317d",
+        "sha256": "sha256:ef853bad72eb073a2bef2744d5374a4697dec73e628867b12a8ef4deec228b76",
+        "copied_byte_exact": true
+      },
+      {
+        "id": "EMBEDDED_DELIMITERS",
+        "substrate_path": "fixtures/e1/lastro-7f08a98/embedded-delimiters.bin",
+        "bytes_hex": "6c696e65310a6c696e65320d0a7c3a2c",
+        "sha256": "sha256:168e31f1215ed8d98bf54026154b62ab5a157ffd6f56cc53477935055e8209e2",
+        "copied_byte_exact": true
+      },
+      {
+        "id": "NON_UTF8_BINARY",
+        "substrate_path": "fixtures/e1/lastro-7f08a98/non-utf8-binary.bin",
+        "bytes_hex": "00ff807f000a0d",
+        "sha256": "sha256:f4ed7beca1ed006b92d6fa61c70c670c68ae2a758595d67c3cd801a60cf83d93",
+        "copied_byte_exact": true
+      }
+    ]
+  },
+  "joint_gate_1_witness": {
+    "reconciliation_repository": "SNE-Labs/SNE-Agency",
+    "reconciliation_commit": "059bc71f9819f22f16c8cc927cdade1b46c91dc3",
+    "reconciliation_path": "compatibility/agency-lastro-reconciliation-r8.json",
+    "reconciliation_git_blob": "7b37895d546c20b3c1739c1cc78b177b5be5ebfd",
+    "generic_framing_and_crash_atomicity": "CLOSED_JOINT_PASS",
+    "accepted_implementation_commit": "fe4d1a7ad962ab74ac2950246d7cd57ef3eb050d",
+    "physical_evidence_commit": "d7cc633b5836fdfb5c90f692f0b92d80b2ff6ae9"
+  },
+  "e1_extraction_decision": {
+    "include": [
+      "format discriminator",
+      "protocol version",
+      "structural ordinal",
+      "payload length",
+      "opaque payload bytes",
+      "canonical byte encoding",
+      "strict frame-local decoding"
+    ],
+    "defer_to_e2": [
+      "payload digest",
+      "predecessor digest",
+      "digest algorithm",
+      "cross-frame chaining policy"
+    ],
+    "defer_to_e3_or_later": [
+      "ordinal continuity",
+      "history replay",
+      "expected-head append",
+      "writer locking",
+      "snapshot binding"
+    ]
+  },
+  "origin_fixture_bytes_may_be_rewritten": false,
+  "consumer_history_migration_performed": false,
+  "consumer_cutover_authorized": false
+}
