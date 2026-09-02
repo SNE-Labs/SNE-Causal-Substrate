@@ -1,0 +1,68 @@
+{
+  "reconciliation": "R10.1_JOINT_NEUTRAL_REPOSITORY_BOOTSTRAP_ACCEPTANCE",
+  "constitution": "AGENCY-LASTRO-SUBSTRATE-CONSTITUTION-001",
+  "joint_r10": {
+    "authorization": "AUTHORIZED",
+    "shared_receipt_git_blob_sha1": "96e61f7e48150467fcd12bc4916e74e28e534a57"
+  },
+  "substrate": {
+    "repository": "SNE-Labs/SNE-Causal-Substrate",
+    "visibility": "PUBLIC",
+    "default_branch": "main",
+    "bootstrap_commit": "a455320bbd5adc3478a5198e394d6f67ce679b5b",
+    "bootstrap_manifest_path": "constitutional/bootstrap.json",
+    "bootstrap_manifest_git_blob_sha1": "7121f9f27fa0f4fb7dd6070ba1e0791e074fe052",
+    "bootstrap_ci_run": 33662366896,
+    "bootstrap_linux_status": "SUCCESS",
+    "bootstrap_windows_status": "SUCCESS"
+  },
+  "orivern_review": {
+    "repository": "SNE-Labs/Lastro",
+    "commit": "039644e2a1afd2b6f710c867908e2d046e55a9b9",
+    "ci_run": 33662550815,
+    "ci_status": "SUCCESS",
+    "verdict": "PASS_BOOTSTRAP_CANDIDATE"
+  },
+  "aevum_review": {
+    "repository": "SNE-Labs/SNE-Agency",
+    "commit": "aca27a4378972a6b5c074f266f5ec527f4c30d7e",
+    "artifact": "compatibility/agency-lastro-r10-1-neutral-bootstrap-aevum-review.json",
+    "git_blob_sha1": "41ecef42348da4c2dfbcfe3858b1c65ddf01aa3e",
+    "ci_run": 33663101637,
+    "linux_status": "SUCCESS",
+    "windows_status": "SUCCESS",
+    "verdict": "PASS_BOOTSTRAP_CANDIDATE"
+  },
+  "joint_findings": {
+    "repository_created_under_constitutional_name": true,
+    "constitutional_pins_verified": true,
+    "dual_steward_governance_declared": true,
+    "ontology_neutral_scope_preserved": true,
+    "package_import_grants_no_authority": true,
+    "consumer_semantic_admission_not_transferred": true,
+    "neutral_package_scaffold_contains_no_extracted_mechanism": true,
+    "linux_and_windows_bootstrap_ci_pass": true,
+    "both_independent_consumer_reviews_pass": true,
+    "existing_consumer_implementations_remain_canonical": true
+  },
+  "boundary": {
+    "extracted_mechanisms": [],
+    "shared_package_published": false,
+    "first_release_authorized": false,
+    "branch_protection_installed": false,
+    "branch_protection_required_before_first_release": true,
+    "consumer_cutover_authorized": false,
+    "consumer_cutover_performed": false,
+    "journal_migration_performed": false,
+    "history_rewritten": false,
+    "e1_implemented": false
+  },
+  "r10_1_orivern": "PASS",
+  "r10_1_aevum": "PASS",
+  "r10_1_joint": "CLOSED_JOINT_PASS",
+  "constitutional_bootstrap_accepted": true,
+  "shared_extraction_authorized": true,
+  "next_checkpoint": "E1_RECORD_FRAMING_CANDIDATE",
+  "e1_implementation_authorized": true,
+  "e1_consumer_cutover_authorized": false
+}
