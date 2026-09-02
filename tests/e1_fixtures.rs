@@ -46,7 +46,9 @@ fn origin_fixture_bytes_are_preserved_exactly() {
         "63d4a816bf3a7c36ff05f28a362898a684ea0c74"
     );
 
-    let payloads = origin["payloads"].as_array().expect("payload fixture array");
+    let payloads = origin["payloads"]
+        .as_array()
+        .expect("payload fixture array");
     assert_eq!(payloads.len(), 3);
 
     for payload in payloads {

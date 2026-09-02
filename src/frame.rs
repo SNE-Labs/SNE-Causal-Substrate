@@ -59,17 +59,11 @@ impl RecordFrame {
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum FrameError {
     PayloadTooLarge,
-    HeaderTruncated {
-        minimum: usize,
-        actual: usize,
-    },
+    HeaderTruncated { minimum: usize, actual: usize },
     FormatMismatch,
     UnsupportedVersion(u16),
     LengthOverflow,
-    LengthMismatch {
-        expected: usize,
-        actual: usize,
-    },
+    LengthMismatch { expected: usize, actual: usize },
 }
 
 impl fmt::Display for FrameError {
@@ -156,5 +150,8 @@ pub fn decode_frame(bytes: &[u8]) -> Result<RecordFrame, FrameError> {
         });
     }
 
-    Ok(RecordFrame::new(ordinal, bytes[FRAME_HEADER_LEN..].to_vec()))
+    Ok(RecordFrame::new(
+        ordinal,
+        bytes[FRAME_HEADER_LEN..].to_vec(),
+    ))
 }

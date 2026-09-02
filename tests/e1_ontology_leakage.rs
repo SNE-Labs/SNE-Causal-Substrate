@@ -40,7 +40,8 @@ fn e1_core_does_not_smuggle_e2_digest_or_predecessor_mechanics() {
 
 #[test]
 fn consumer_ab_substitution_witness_is_name_independent() {
-    let witness = fs::read_to_string("e1/CONSUMER-AB-WITNESS.md").expect("read substitution witness");
+    let witness =
+        fs::read_to_string("e1/CONSUMER-AB-WITNESS.md").expect("read substitution witness");
     assert!(witness.contains("Consumer A"));
     assert!(witness.contains("Consumer B"));
     assert!(!witness.contains("Agency"));

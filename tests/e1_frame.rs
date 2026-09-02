@@ -7,8 +7,7 @@ const JSON_EVENT_BYTES: &[u8] =
     include_bytes!("../fixtures/e1/lastro-7f08a98/json-event-bytes.bin");
 const EMBEDDED_DELIMITERS: &[u8] =
     include_bytes!("../fixtures/e1/lastro-7f08a98/embedded-delimiters.bin");
-const NON_UTF8_BINARY: &[u8] =
-    include_bytes!("../fixtures/e1/lastro-7f08a98/non-utf8-binary.bin");
+const NON_UTF8_BINARY: &[u8] = include_bytes!("../fixtures/e1/lastro-7f08a98/non-utf8-binary.bin");
 
 #[test]
 fn canonical_layout_is_fixed_and_big_endian() {
@@ -120,10 +119,10 @@ fn impossible_declared_length_is_rejected_without_allocation() {
 
 #[test]
 fn ordinal_is_structural_not_cross_frame_policy() {
-    let first = decode_frame(&encode_frame(900, b"a").expect("encode first"))
-        .expect("decode first");
-    let second = decode_frame(&encode_frame(3, b"b").expect("encode second"))
-        .expect("decode second");
+    let first =
+        decode_frame(&encode_frame(900, b"a").expect("encode first")).expect("decode first");
+    let second =
+        decode_frame(&encode_frame(3, b"b").expect("encode second")).expect("decode second");
 
     assert_eq!(first.ordinal(), 900);
     assert_eq!(second.ordinal(), 3);
